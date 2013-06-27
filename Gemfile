@@ -10,8 +10,9 @@ gem 'coffee-rails'
 gem 'therubyracer'
 gem 'jquery-rails'
 gem 'turbolinks'
-
 gem 'jbuilder'
+
+gem 'devise'
 
 group :doc do
   gem 'sdoc', require: false
