@@ -16,3 +16,12 @@ gem 'jbuilder'
 group :doc do
   gem 'sdoc', require: false
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+
+  gem 'libnotify'
+end
