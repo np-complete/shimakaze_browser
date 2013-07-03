@@ -60,6 +60,7 @@ GEM
     guard-rspec (3.0.2)
       guard (>= 1.8)
       rspec (~> 2.13)
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.4)
     jbuilder (1.4.2)
@@ -84,6 +85,9 @@ GEM
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -173,13 +177,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
-  devise
+  devise (~> 3.0.0.rc)
   guard
   guard-bundler
   guard-rspec
   jbuilder
   jquery-rails
   libnotify
+  omniauth
   rails (= 4.0.0)
   rspec-rails
   sass-rails

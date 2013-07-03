@@ -12,7 +12,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 
-gem 'devise'
+gem 'devise', '~> 3.0.0.rc'
+gem 'omniauth'
 
 group :doc do
   gem 'sdoc', require: false
