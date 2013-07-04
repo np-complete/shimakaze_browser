@@ -14,6 +14,7 @@ gem 'jbuilder'
 
 gem 'devise', '~> 3.0.0.rc'
 gem 'omniauth'
+gem 'omniauth-oauth2'
 
 group :doc do
   gem 'sdoc', require: false
