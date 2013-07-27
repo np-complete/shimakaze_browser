@@ -16,6 +16,10 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 
+gem 'twitter-bootstrap-rails'
+gem 'haml-rails'
+gem 'less-rails'
+
 group :doc do
   gem 'sdoc', require: false
 end
