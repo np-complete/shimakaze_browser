@@ -192,7 +192,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
-  devise (~> 3.0.0.rc)
+  devise
   guard
   guard-bundler
   guard-rspec
