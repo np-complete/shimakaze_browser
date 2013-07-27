@@ -21,5 +21,7 @@ module ShimakazeBrowser
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.sass.preferred_syntax = :sass
+    config.sass.syntax = :sass
   end
 end
