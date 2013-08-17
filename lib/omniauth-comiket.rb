@@ -14,7 +14,8 @@ module OmniAuth
 
       info do
         {
-          :token => raw_info['token']
+          :token => raw_info['token'],
+          :refresh_token => raw_info['refresh_token']
         }
       end
 
@@ -25,8 +26,10 @@ module OmniAuth
       end
 
       def raw_info
-        # @raw_info ||= access_token.get('').parsed
-        @raw_info ||= {:token => access_token.token}
+        @raw_info ||= {
+          'token' => access_token.token,
+          'refresh_token' => access_token.refresh_token
+        }
       end
     end
 
