@@ -19,12 +19,24 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") ShimakazeBrowser
+          = link_to :root, :class => 'brand' do
+            %i.icon-anchor
+            %span.reverse しまかぜ
           .container.nav-collapse
-            %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+            - if user_signed_in?
+              %ul.nav.pull-right
+                %li.dropdown
+                  %a.dropdown-toggle(href="#" data-toggle="dropdown")
+                    %i.icon-user
+                    = current_user.name
+                    .caret
+            - else
+              .nav.pull-right
+                = link_to user_omniauth_authorize_path(:comiket) do
+                  .btn-group
+                    %button.btn.btn-danger
+                      %i.icon-signin
+                      Sign in
 
     .container-fluid
 

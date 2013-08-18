@@ -31,4 +31,7 @@ group :development, :test do
   gem 'guard-rspec'
 
   gem 'libnotify'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-doc'
 end
