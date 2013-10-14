@@ -1,5 +1,8 @@
 ShimakazeBrowser::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => 'omniauth_callbacks' }
+  as :user do
+    get 'sign_out', to: 'top#logout'
+  end
 
   root 'top#index'
   # The priority is based upon order of creation: first created -> highest priority.
