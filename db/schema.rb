@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130627210600) do
+ActiveRecord::Schema.define(version: 20131027102845) do
 
   create_table "users", force: true do |t|
     t.string   "provider"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 20130627210600) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "access_token"
+    t.string   "refresh_token"
+    t.integer  "expires_at"
   end
 
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
