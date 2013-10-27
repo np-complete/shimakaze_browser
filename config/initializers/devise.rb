@@ -229,7 +229,10 @@ Devise.setup do |config|
                      else
                        OmniAuth::Strategies::ComiketSandbox
                      end
-  config.omniauth :comiket, ENV['COMIKET_CLIENT_ID'], ENV['COMIKET_CLIENT_SECRET'], :strategy_class => comiket_strategy
+  config.omniauth :comiket, ENV['COMIKET_CLIENT_ID'], ENV['COMIKET_CLIENT_SECRET'], {
+    scope: "circle_read favorite_read favorite_write",
+    strategy_class: comiket_strategy
+  }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
